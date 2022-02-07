@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1cbe8a28-bf38-4332-9222-cee1f566f3c2": {
+      "ProjectGuid": "1cbe8a28-bf38-4332-9222-cee1f566f3c2",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 0
+    },
+    "2716b7a6-ec20-4e1d-9908-c82e9d515f39": {
+      "ProjectGuid": "2716b7a6-ec20-4e1d-9908-c82e9d515f39",
+      "DisplayName": "MyCompany",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
