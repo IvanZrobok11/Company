@@ -1,15 +1,14 @@
 ﻿using Infrastructure.DataBase;
 using Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Infrastructure.Interfaces;
 
 namespace Infrastructure.Repositories
 {
-    public class ProjectRepositories
+    public class ProjectRepositories : IProjectRepository
     {
         public ProjectRepositories(DataBaseContext dbContext)
         {
@@ -18,7 +17,8 @@ namespace Infrastructure.Repositories
         private readonly DataBaseContext _dbContext;
         public IEnumerable<Employee> GetAllEmployeeOfProject(Project project)
         {
-            return _dbContext.Employees.Include(p => p.CurrentProject)
+            return _dbContext.Employees
+                .Include(p => p.CurrentProject)
                 .Where(e => e.CurrentProject.Id == project.Id);
         }
         public async Task Create(Project project)
@@ -48,9 +48,12 @@ namespace Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task FindCurrentProject(Employee employee)
+        public async Task<Project> FindCurrentProject(Employee employee)
         {
-            
+            return await _dbContext.Projects.FindAsync(
+                employee.DateOfBirth,
+                employee.PassportSerialNumber,
+                employee.Email);
         }
     }
-} 
+}

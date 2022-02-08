@@ -18,6 +18,5 @@ namespace Infrastructure.Models
         public string Email { get; set; }
         public string Address { get; set; }
         public string PassportSerialNumber { get; set; }
-        public string INN { get; set; }
     }
 }

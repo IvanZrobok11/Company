@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Infrastructure.Enums;
 
 namespace Infrastructure.Models
 {
@@ -18,5 +19,6 @@ namespace Infrastructure.Models
         [MaxLength(100)]
         public string ProjectName { get; set; }
         public double? Cost { get; set; }
+        public ProjectState State { get; set; }
     }
 }

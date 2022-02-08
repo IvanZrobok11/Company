@@ -16,6 +16,7 @@ namespace Infrastructure.DataBase.Configuration
 
             builder.HasOne(p => p.CurrentProject)
                 .WithMany(p => p.Employees)
+                .HasForeignKey(k => k.ProjectId)
                 .OnDelete(deleteBehavior: DeleteBehavior.SetNull); 
         }
     }

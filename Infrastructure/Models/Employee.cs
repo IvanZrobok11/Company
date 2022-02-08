@@ -5,9 +5,9 @@ namespace Infrastructure.Models
 {
     public class Employee : People
     {
-        public decimal Salary { get; set; }
-        public Position Position { get; set; }
-        public TimeSpan Experience { get; set; }
+        public decimal? Salary { get; set; }
+        public Position? Position { get; set; }
+        public TimeSpan? Experience { get; set; }
 
         public Project CurrentProject { get; set; }
         public int? ProjectId { get; set; }

@@ -67,7 +67,8 @@ namespace Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CustomerId = table.Column<int>(type: "int", nullable: false),
                     ProjectName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Cost = table.Column<double>(type: "float", nullable: true)
+                    Cost = table.Column<double>(type: "float", nullable: true),
+                    State = table.Column<int>(type: "int", nullable: false, defaultValue: 0)
                 },
                 constraints: table =>
                 {
@@ -87,9 +88,9 @@ namespace Infrastructure.Migrations
                     DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PassportSerialNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Position = table.Column<int>(type: "int", nullable: false),
-                    Experience = table.Column<TimeSpan>(type: "time", nullable: false),
+                    Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: true),
+                    Position = table.Column<int>(type: "int", nullable: true),
+                    Experience = table.Column<TimeSpan>(type: "time", nullable: true),
                     ProjectId = table.Column<int>(type: "int", nullable: true),
                     DepartmentNumber = table.Column<int>(type: "int", nullable: false),
                     DepartmentAddress = table.Column<string>(type: "nvarchar(450)", nullable: true),
@@ -97,8 +98,7 @@ namespace Infrastructure.Migrations
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Sex = table.Column<int>(type: "int", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    INN = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
