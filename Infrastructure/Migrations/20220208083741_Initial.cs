@@ -44,14 +44,13 @@ namespace Infrastructure.Migrations
                 name: "Departments",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false),
+                    address = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     DNumber = table.Column<int>(type: "int", nullable: false),
-                    location = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CompanyId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Department", x => new { x.Id, x.DNumber });
+                    table.PrimaryKey("PK_Department", x => new { x.address, x.DNumber });
                     table.ForeignKey(
                         name: "FK_Departments_Companies_CompanyId",
                         column: x => x.CompanyId,
@@ -68,7 +67,7 @@ namespace Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CustomerId = table.Column<int>(type: "int", nullable: false),
                     ProjectName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    Cost = table.Column<int>(type: "int", nullable: true)
+                    Cost = table.Column<double>(type: "float", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -85,38 +84,37 @@ namespace Infrastructure.Migrations
                 name: "Employees",
                 columns: table => new
                 {
+                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PassportSerialNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    INN = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Id = table.Column<int>(type: "int", nullable: false),
                     Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Position = table.Column<int>(type: "int", nullable: false),
                     Experience = table.Column<TimeSpan>(type: "time", nullable: false),
-                    ProjectId = table.Column<int>(type: "int", nullable: false),
+                    ProjectId = table.Column<int>(type: "int", nullable: true),
                     DepartmentNumber = table.Column<int>(type: "int", nullable: false),
-                    DepartmentId = table.Column<int>(type: "int", nullable: false),
+                    DepartmentAddress = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    DateOfBirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Sex = table.Column<int>(type: "int", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    INN = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Employee", x => new { x.INN, x.PassportSerialNumber, x.Id });
+                    table.PrimaryKey("PK_Employee", x => new { x.DateOfBirth, x.PassportSerialNumber, x.Email });
                     table.ForeignKey(
-                        name: "FK_Employees_Departments_DepartmentId_DepartmentNumber",
-                        columns: x => new { x.DepartmentId, x.DepartmentNumber },
+                        name: "FK_Employees_Departments_DepartmentAddress_DepartmentNumber",
+                        columns: x => new { x.DepartmentAddress, x.DepartmentNumber },
                         principalTable: "Departments",
-                        principalColumns: new[] { "Id", "DNumber" },
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumns: new[] { "address", "DNumber" },
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Employees_Projects_ProjectId",
                         column: x => x.ProjectId,
                         principalTable: "Projects",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateIndex(
@@ -130,9 +128,9 @@ namespace Infrastructure.Migrations
                 column: "CompanyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Employees_DepartmentId_DepartmentNumber",
+                name: "IX_Employees_DepartmentAddress_DepartmentNumber",
                 table: "Employees",
-                columns: new[] { "DepartmentId", "DepartmentNumber" });
+                columns: new[] { "DepartmentAddress", "DepartmentNumber" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Employees_ProjectId",

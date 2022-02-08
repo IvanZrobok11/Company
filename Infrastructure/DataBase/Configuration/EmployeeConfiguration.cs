@@ -9,13 +9,14 @@ namespace Infrastructure.DataBase.Configuration
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
             builder.HasKey(
-                    nameof(Employee.INN),
+                    nameof(Employee.DateOfBirth),
                     nameof(Employee.PassportSerialNumber),
-                    nameof(Employee.Id))
+                    nameof(Employee.Email))
                 .HasName("PK_Employee");
 
             builder.HasOne(p => p.CurrentProject)
-                .WithMany(p => p.Employees);
+                .WithMany(p => p.Employees)
+                .OnDelete(deleteBehavior: DeleteBehavior.SetNull); 
         }
     }
 }

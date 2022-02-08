@@ -13,7 +13,8 @@ namespace Infrastructure.DataBase.Configuration
 
             builder.HasOne(p => p.Customer)
                 .WithMany(p => p.Projects)
-                .HasForeignKey(k => k.CustomerId);
+                .HasForeignKey(k => k.CustomerId)
+                .OnDelete(deleteBehavior: DeleteBehavior.Cascade); ;
         }
     }
 }

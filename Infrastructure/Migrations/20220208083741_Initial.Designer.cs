@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20220207152947_Initial")]
+    [Migration("20220208083741_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,8 +65,9 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Infrastructure.Models.Department", b =>
                 {
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(450)")
+                        .HasColumnName("address");
 
                     b.Property<int>("DNumber")
                         .HasColumnType("int");
@@ -74,11 +75,7 @@ namespace Infrastructure.Migrations
                     b.Property<string>("CompanyId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Location")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("location");
-
-                    b.HasKey("Id", "DNumber")
+                    b.HasKey("Address", "DNumber")
                         .HasName("PK_Department");
 
                     b.HasIndex("CompanyId");
@@ -88,29 +85,23 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Infrastructure.Models.Employee", b =>
                 {
-                    b.Property<string>("INN")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("PassportSerialNumber")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DepartmentId")
-                        .HasColumnType("int");
+                    b.Property<string>("DepartmentAddress")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("DepartmentNumber")
                         .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<TimeSpan>("Experience")
                         .HasColumnType("time");
@@ -119,6 +110,9 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("INN")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -131,7 +125,7 @@ namespace Infrastructure.Migrations
                     b.Property<int>("Position")
                         .HasColumnType("int");
 
-                    b.Property<int>("ProjectId")
+                    b.Property<int?>("ProjectId")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Salary")
@@ -140,12 +134,12 @@ namespace Infrastructure.Migrations
                     b.Property<int>("Sex")
                         .HasColumnType("int");
 
-                    b.HasKey("INN", "PassportSerialNumber", "Id")
+                    b.HasKey("DateOfBirth", "PassportSerialNumber", "Email")
                         .HasName("PK_Employee");
 
                     b.HasIndex("ProjectId");
 
-                    b.HasIndex("DepartmentId", "DepartmentNumber");
+                    b.HasIndex("DepartmentAddress", "DepartmentNumber");
 
                     b.ToTable("Employees");
                 });
@@ -157,8 +151,8 @@ namespace Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("Cost")
-                        .HasColumnType("int");
+                    b.Property<double?>("Cost")
+                        .HasColumnType("float");
 
                     b.Property<int>("CustomerId")
                         .HasColumnType("int");
@@ -201,14 +195,11 @@ namespace Infrastructure.Migrations
                     b.HasOne("Infrastructure.Models.Project", "CurrentProject")
                         .WithMany("Employees")
                         .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.HasOne("Infrastructure.Models.Department", "Department")
-                        .WithMany("Emploees")
-                        .HasForeignKey("DepartmentId", "DepartmentNumber")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Employees")
+                        .HasForeignKey("DepartmentAddress", "DepartmentNumber");
 
                     b.Navigation("CurrentProject");
 
@@ -240,7 +231,7 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Infrastructure.Models.Department", b =>
                 {
-                    b.Navigation("Emploees");
+                    b.Navigation("Employees");
                 });
 
             modelBuilder.Entity("Infrastructure.Models.Project", b =>

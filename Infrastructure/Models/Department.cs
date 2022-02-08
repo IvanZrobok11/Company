@@ -6,15 +6,14 @@ namespace Infrastructure.Models
     {
         public Department()
         {
-            Emploees = new List<Employee>();
+            Employees = new List<Employee>();
         }
-        public IEnumerable<Employee> Emploees { get; set; }
-        public string Location { get; set; }
+        public IEnumerable<Employee> Employees { get; set; }
+        public string Address { get; set; }
 
         public Company Company { get; set; }
         public string CompanyId { get; set; }
 
-        public int Id { get; set; }
         public int DNumber { get; set; }
     }
 }

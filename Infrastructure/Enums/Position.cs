@@ -4,6 +4,7 @@
     {
         Designer,
         Programer,
+        Lead
         /*Some more position*/
     }
 }

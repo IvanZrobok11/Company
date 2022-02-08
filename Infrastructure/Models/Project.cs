@@ -13,11 +13,10 @@ namespace Infrastructure.Models
         public Customer Customer { get; set; }
         public int CustomerId { get; set; }
 
-
         public int Id { get; set; }
         [Required]
         [MaxLength(100)]
         public string ProjectName { get; set; }
-        public int? Cost { get; set; }
+        public double? Cost { get; set; }
     }
 }

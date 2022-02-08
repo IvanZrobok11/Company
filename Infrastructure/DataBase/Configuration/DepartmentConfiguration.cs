@@ -8,16 +8,15 @@ namespace Infrastructure.DataBase.Configuration
     {
         public void Configure(EntityTypeBuilder<Department> builder)
         {
-            builder.HasKey(nameof(Department.Id), nameof(Department.DNumber))
+            builder.HasKey(nameof(Department.Address), nameof(Department.DNumber))
                 .HasName("PK_Department");
 
-            builder.Property(k => k.Location)
-                .HasColumnName("location");
+            builder.Property(k => k.Address)
+                .HasColumnName("address");
 
-
-            builder.HasMany(k => k.Emploees)
+            builder.HasMany(k => k.Employees)
                 .WithOne(k => k.Department)
-                .HasForeignKey(nameof(Employee.DepartmentId), nameof(Employee.DepartmentNumber));
+                .HasForeignKey(nameof(Employee.DepartmentAddress), nameof(Employee.DepartmentNumber));
         }
     }
 }
