@@ -2,7 +2,6 @@ C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\bin\Debug\net5.0\Infrastr
 C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
 C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
 C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
-C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
 C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
 C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs

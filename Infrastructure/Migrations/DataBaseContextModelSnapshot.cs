@@ -43,11 +43,7 @@ namespace Infrastructure.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CompanyId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("CompanyOUI")
-                        .IsRequired()
+                    b.Property<string>("CompanyId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("FullName")
@@ -56,7 +52,7 @@ namespace Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("PK_id");
 
-                    b.HasIndex("CompanyOUI");
+                    b.HasIndex("CompanyId");
 
                     b.ToTable("Customers");
                 });
@@ -83,7 +79,7 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Infrastructure.Models.Employee", b =>
                 {
-                    b.Property<DateTime>("DateOfBirth")
+                    b.Property<DateTime?>("DateOfBirth")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PassportSerialNumber")
@@ -174,9 +170,7 @@ namespace Infrastructure.Migrations
                 {
                     b.HasOne("Infrastructure.Models.Company", "Company")
                         .WithMany("Customers")
-                        .HasForeignKey("CompanyOUI")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CompanyId");
 
                     b.Navigation("Company");
                 });

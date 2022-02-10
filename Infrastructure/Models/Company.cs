@@ -12,7 +12,7 @@ namespace Infrastructure.Models
         }
         public IEnumerable<Department> Departments { get; set; }
         public IEnumerable<Customer> Customers { get; set; }
-        public string OUI { get; set; } // Key
+        public string OUI { get; set; } // Key  (Organizationally Unique Identifier)
 
         [Required]
         [MaxLength(50)]

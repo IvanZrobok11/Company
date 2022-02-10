@@ -19,7 +19,8 @@ namespace Infrastructure.DataBase.Configuration
                 .WithOne(k => k.Company);
 
             builder.HasMany(k => k.Customers)
-                .WithOne(k => k.Company);
+                .WithOne(k => k.Company)
+                .HasForeignKey(nameof(Customer.CompanyId));
         }
     }
 }

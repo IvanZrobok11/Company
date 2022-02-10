@@ -25,11 +25,14 @@ namespace Infrastructure.Repositories
             _dbContext.Departments.Remove(department);
             await _dbContext.SaveChangesAsync();
         }
-        public IAsyncEnumerable<Department> GetAll()
+        public async IAsyncEnumerable<Department> GetAll()
         {
-            return _dbContext.Departments.AsAsyncEnumerable();
+            var all = _dbContext.Departments.AsAsyncEnumerable();
+            await foreach (var department in all)
+            {
+                yield return department;
+            }
         }
-
         public async Task Update(Department department)
         {
             _dbContext.Departments.Update(department);

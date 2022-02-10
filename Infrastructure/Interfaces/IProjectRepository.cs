@@ -10,6 +10,5 @@ namespace Infrastructure.Interfaces
         public Task Create(Project project);
         public Task Create(string name, Customer customer, double? cost);
         public Task Create(string name, Customer customer, double? cost, params Employee[] employees);
-        public Task<Project> FindCurrentProject(Employee employee);
     }
 }

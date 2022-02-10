@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infrastructure.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -26,18 +26,17 @@ namespace Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CompanyId = table.Column<int>(type: "int", nullable: false),
-                    CompanyOUI = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    CompanyId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_id", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Customers_Companies_CompanyOUI",
-                        column: x => x.CompanyOUI,
+                        name: "FK_Customers_Companies_CompanyId",
+                        column: x => x.CompanyId,
                         principalTable: "Companies",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -118,9 +117,9 @@ namespace Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Customers_CompanyOUI",
+                name: "IX_Customers_CompanyId",
                 table: "Customers",
-                column: "CompanyOUI");
+                column: "CompanyId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Departments_CompanyId",

@@ -60,5 +60,12 @@ namespace Infrastructure.Repositories
             _dbContext.Employees.Remove(employee);
             await _dbContext.SaveChangesAsync();
         }
+        public async Task<Project> FindCurrentProject(Employee employee)
+        {
+            return await _dbContext.Projects.FindAsync(
+                employee.DateOfBirth,
+                employee.PassportSerialNumber,
+                employee.Email);
+        }
     }
 }

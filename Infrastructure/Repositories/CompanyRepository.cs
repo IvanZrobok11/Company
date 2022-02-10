@@ -8,12 +8,11 @@ namespace Infrastructure.Repositories
 {
     public class CompanyRepository : ICompanyRepository
     {
-        public CompanyRepository(DataBaseContext context, CustomerRepository customerRepo)
+        public CompanyRepository(DataBaseContext context)
         {
             _dbContext = context;
-            _customerRepo = customerRepo;
+       
         }
-        private readonly CustomerRepository _customerRepo;
         private readonly DataBaseContext _dbContext;
         public async Task ChangeName(string name)
         {
@@ -23,9 +22,9 @@ namespace Infrastructure.Repositories
 
             await _dbContext.SaveChangesAsync();
         }
-        public async Task RemoveCustomers(int customerId)
+        public async Task RemoveCustomerAsync(int customerId)
         {
-            var customer = await _customerRepo.GetAll()
+            var customer = await _dbContext.Customers
                 .FirstOrDefaultAsync(p => p.Id == customerId);
             if (customer != null)
             {
@@ -33,7 +32,7 @@ namespace Infrastructure.Repositories
                 await _dbContext.SaveChangesAsync();
             }
         }
-        public async Task AddCustomers(Customer customer)
+        public async Task AddCustomerAsync(Customer customer)
         {
             await _dbContext.Customers.AddAsync(customer);
             await _dbContext.SaveChangesAsync();

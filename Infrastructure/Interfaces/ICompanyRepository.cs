@@ -6,8 +6,8 @@ namespace Infrastructure.Interfaces
     public interface ICompanyRepository
     {
         public Task ChangeName(string name);
-        public Task RemoveCustomers(int customerId);
-        public Task AddCustomers(Customer customer);
+        public Task RemoveCustomerAsync(int customerId);
+        public Task AddCustomerAsync(Customer customer);
         public Task CreateDepartment(Department department);
         public Task RemoveDepartment(Department department);
     }
