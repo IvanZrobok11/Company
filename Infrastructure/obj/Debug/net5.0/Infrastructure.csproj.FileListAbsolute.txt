@@ -12,3 +12,4 @@ C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\obj\Debug\net5.0\Infrastr
 C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.json
 C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\bin\Debug\net5.0\Infrastructure.runtimeconfig.dev.json
 C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
+C:\Users\VanyaPc\source\repos\MyCompany\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache

@@ -15,5 +15,6 @@ namespace Infrastructure.Interfaces
         public Task TransferEmployee(Employee employee, Department newDepartment);
         public Task DismissEmployee(Employee employee);
         public Task<Project> FindCurrentProject(Employee employee);
+        public Task<int> CountEmployees();
     }
 }

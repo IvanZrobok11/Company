@@ -54,7 +54,7 @@ namespace MyCompany
             var companyRepo = new CompanyRepository(db);
             await companyRepo.CreateDepartment(_department);
         }
-        public async Task RemoveCustomerAsync(DataBaseContext db)
+        public async Task RemoveCustomer(DataBaseContext db)
         {
             var companyRepo = new CompanyRepository(db);
             await companyRepo.RemoveCustomerAsync(_customer.Id);
@@ -94,7 +94,11 @@ namespace MyCompany
             var employeeRepository = new EmployeeRepository(db);
             await employeeRepository.FindCurrentProject(_employee);
         }
-
+        public async Task CountEmployees(DataBaseContext db)
+        {
+            var employeeRepository = new EmployeeRepository(db);
+            await employeeRepository.CountEmployees();
+        }
         #region 
 
         public class AnalysisProjectRepository

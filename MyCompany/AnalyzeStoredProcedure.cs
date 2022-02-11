@@ -4,24 +4,25 @@ using Infrastructure.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Data;
 using System.Threading.Tasks;
 
 namespace MyCompany
 {
     public class AnalyzeStoredProcedure
     {
-        private Customer _customer = new Customer
+        private readonly Customer _customer = new Customer
         {
             Id = 20,
             CompanyId = "00:00:5e:00:53:af"
         };
-        private Department _department = new Department
+        private readonly Department _department = new Department
         {
             DNumber = 20,
             CompanyId = "00:00:5e:00:53:af",
             Address = "NewYork",
         };
-        private Employee _employee = new Employee
+        private readonly Employee _employee = new Employee
         {
             DateOfBirth = new DateTime(1990, 12, 30),
             Email = "example@email.com",
@@ -32,7 +33,7 @@ namespace MyCompany
             DepartmentNumber = 20,
             DepartmentAddress = "NewYork"
         };
-        private Project _project = new Project
+        private readonly Project _project = new Project
         {
             CustomerId = 20,
             ProjectName = "Some project name",
@@ -53,27 +54,27 @@ namespace MyCompany
             await db.Database.ExecuteSqlRawAsync("ChangeName @name", param);
         }
 
-        public async Task CreateDepartmentAsync(DataBaseContext db)
+        public async Task CreateDepartment(DataBaseContext db)
         {
             var paramId = new SqlParameter($"@id", $"{_department.DNumber}");
             var paramCompanyId = new SqlParameter($"@companyId", $"{_department.CompanyId}");
             await db.Database.ExecuteSqlRawAsync("CreateDepartment @name, @companyId", paramId, paramCompanyId);
         }
 
-        public async Task RemoveCustomerAsync(DataBaseContext db)
+        public async Task RemoveCustomer(DataBaseContext db)
         {
             var param = new SqlParameter("@id", _customer.Id);
             await db.Database.ExecuteSqlRawAsync("RemoveCustomer @id", param);
         }
 
-        public async Task RemoveDepartmentAsync(DataBaseContext db)
+        public async Task RemoveDepartment(DataBaseContext db)
         {
             var paramDNumber = new SqlParameter("@name", _department.DNumber);
             var paramAddress = new SqlParameter("@address", _department.Address);
             await db.Database.ExecuteSqlRawAsync("RemoveDepartment @dNumber, @address", paramDNumber, paramAddress);
         }
 
-        public async Task UpdateDepartmentAsync(DataBaseContext db)
+        public async Task UpdateDepartment(DataBaseContext db)
         {
             var paramDNumber = new SqlParameter("@name", _department.DNumber);
             var paramAddress = new SqlParameter("@address", _department.Address);
@@ -116,6 +117,16 @@ namespace MyCompany
             var paramPassportSerialNumber = new SqlParameter("@PassportSerialNumber", _employee.PassportSerialNumber);
             db.Employees.FromSqlRaw("FindEmployee @PassportSerialNumber",
                  paramPassportSerialNumber);
+        }
+        public async Task CountEmployees(DataBaseContext db)
+        {
+            var parameter = new SqlParameter
+            {
+                ParameterName = "@quantity",
+                SqlDbType = SqlDbType.Int,
+                Direction = ParameterDirection.Output,
+            };
+            db.Employees.FromSqlRaw("CountEmployees @quantity OUT", parameter);
         }
         public async Task FindCurrentProject(DataBaseContext db)
         {

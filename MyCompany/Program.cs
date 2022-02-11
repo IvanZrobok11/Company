@@ -20,8 +20,9 @@ namespace MyCompany
                 ef.RemoveDepartment,
                 ef.ChangeName,
                 ef.AddCustomer,
-                ef.RemoveCustomerAsync,
+                ef.RemoveCustomer,
                 ef.HireEmployee,
+                ef.CountEmployees,
                 ef.FindEmployee,
                 ef.FindCurrentProject,
                 ef.DismissEmployee,
@@ -29,7 +30,7 @@ namespace MyCompany
 
             foreach (var method in listEfMethods)
             {
-                using (var db = new DataBaseContext())
+                await using (var db = new DataBaseContext())
                 {
                     PrintResult(method.GetMethodInfo().Name, MeasureTime(method, db));
                     await Task.Delay(1000);
@@ -41,14 +42,15 @@ namespace MyCompany
             var sp = new AnalyzeStoredProcedure();
             var listSpMethods = new List<MakeDbDelegate>
             {
-                sp.CreateDepartmentAsync,
-                sp.UpdateDepartmentAsync,
+                sp.CreateDepartment,
+                sp.UpdateDepartment,
                 sp.GetAllDepartment,
-                sp.RemoveDepartmentAsync,
+                sp.RemoveDepartment,
                 sp.ChangeName,
                 sp.AddCustomer,
-                sp.RemoveCustomerAsync,
+                sp.RemoveCustomer,
                 sp.HireEmployee,
+                sp.CountEmployees,
                 sp.FindEmployee,
                 sp.FindCurrentProject,
                 sp.DismissEmployee,
@@ -56,10 +58,10 @@ namespace MyCompany
 
             foreach (var method in listSpMethods)
             {
-                using (var db = new DataBaseContext())
+                await using (var db = new DataBaseContext())
                 {
-                    await Task.Delay(1000);
                     PrintResult(method.GetMethodInfo().Name, MeasureTime(method, db));
+                    await Task.Delay(1000);
                 }
             }
         }
@@ -68,7 +70,6 @@ namespace MyCompany
         {
             Console.WriteLine($"{methodName}--{time}");
         }
-
         private static long MeasureTime(MakeDbDelegate makeDb, DataBaseContext db)
         {
             var watch = new Stopwatch();

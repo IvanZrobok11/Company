@@ -1,8 +1,10 @@
 ﻿using Infrastructure.DataBase;
 using Infrastructure.Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Infrastructure.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
@@ -66,6 +68,11 @@ namespace Infrastructure.Repositories
                 employee.DateOfBirth,
                 employee.PassportSerialNumber,
                 employee.Email);
+        }
+
+        public async Task<int> CountEmployees()
+        {
+            return await _dbContext.Employees.AsQueryable().CountAsync();
         }
     }
 }
