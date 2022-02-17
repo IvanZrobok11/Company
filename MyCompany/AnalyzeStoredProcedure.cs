@@ -96,7 +96,7 @@ namespace MyCompany
             var paramDepartmentNumber = new SqlParameter("@DepartmentNumber", _employee.DepartmentNumber);
             var paramSex = new SqlParameter("@Sex", _employee.Sex);
             var paramDepartmentAddress = new SqlParameter("@DepartmentAddress", _employee.DepartmentAddress);
-            await db.Database.ExecuteSqlRawAsync("AddEmployeeToProject @DateOfBirth, @Email, @PassportSerialNumber, " +
+            await db.Database.ExecuteSqlRawAsync("HireEmployee @DateOfBirth, @Email, @PassportSerialNumber, " +
                                                  "@FirstName, @LastName, @DepartmentNumber, @Sex, @DepartmentAddress",
                 paramDateOfBirth, paramEmail, paramPassportSerialNumber,
                 paramFirstName, paramLastName, paramDepartmentNumber,
