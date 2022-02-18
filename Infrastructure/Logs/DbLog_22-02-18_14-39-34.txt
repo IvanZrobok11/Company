@@ -1,0 +1,1186 @@
+warn: 18.02.2022 14:39:35.618 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:35.732 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:35.818 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Department' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:35.824 CoreEventId.SaveChangesStarting[10004] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:35.826 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:35.834 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:35.880 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:36.910 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:36.970 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:36.975 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:36.988 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Department' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:36.989 CoreEventId.SaveChangesStarting[10004] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:36.989 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:36.989 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:36.990 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:37.194 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:37.197 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 18.02.2022 14:39:37.209 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'ReadCommitted'.
+dbug: 18.02.2022 14:39:37.279 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:37.285 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (3ms).
+dbug: 18.02.2022 14:39:37.311 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p1='?' (Size = 450), @p2='?' (DbType = Int32), @p0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Departments] SET [CompanyId] = @p0
+      WHERE [address] = @p1 AND [DNumber] = @p2;
+      SELECT @@ROWCOUNT;
+info: 18.02.2022 14:39:37.363 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (61ms) [Parameters=[@p1='?' (Size = 450), @p2='?' (DbType = Int32), @p0='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Departments] SET [CompanyId] = @p0
+      WHERE [address] = @p1 AND [DNumber] = @p2;
+      SELECT @@ROWCOUNT;
+dbug: 18.02.2022 14:39:37.380 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:39:37.383 RelationalEventId.TransactionCommitting[20210] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committing transaction.
+dbug: 18.02.2022 14:39:37.387 RelationalEventId.TransactionCommitted[20202] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committed transaction.
+dbug: 18.02.2022 14:39:37.389 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:37.391 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:37.393 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 18.02.2022 14:39:37.397 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'Department' tracked by 'DataBaseContext' changed state from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:37.398 CoreEventId.SaveChangesCompleted[10005] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges completed for 'DataBaseContext' with 1 entities written to the database.
+dbug: 18.02.2022 14:39:38.007 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:38.035 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:38.037 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:38.095 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Department>()'
+dbug: 18.02.2022 14:39:38.247 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Department>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Department.Address (string) Required PK AfterSave:Throw, 0], [Property: Department.DNumber (int) Required PK AfterSave:Throw, 1], [Property: Department.CompanyId (string) FK Index, 2], }
+              SELECT d.address, d.DNumber, d.CompanyId
+              FROM Departments AS d), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Department>, 
+          Infrastructure.DataBase.DataBaseContext, 
+          False, 
+          False
+      )'
+dbug: 18.02.2022 14:39:38.278 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:38.278 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:39:38.278 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:38.278 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:38.278 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[address], [d].[DNumber], [d].[CompanyId]
+      FROM [Departments] AS [d]
+info: 18.02.2022 14:39:38.280 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [d].[address], [d].[DNumber], [d].[CompanyId]
+      FROM [Departments] AS [d]
+dbug: 18.02.2022 14:39:38.293 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Department' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:38.301 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:39:38.301 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:38.301 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:39.288 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:39.310 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:39.312 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:39.320 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Department' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:39.321 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'Department' tracked by 'DataBaseContext' changed state from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:39.324 CoreEventId.SaveChangesStarting[10004] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:39.324 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:39.325 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:39.325 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:39.325 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:39.325 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 18.02.2022 14:39:39.326 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'ReadCommitted'.
+dbug: 18.02.2022 14:39:39.332 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:39.332 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:39:39.332 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      DELETE FROM [Departments]
+      WHERE [address] = @p0 AND [DNumber] = @p1;
+      SELECT @@ROWCOUNT;
+fail: 18.02.2022 14:39:39.339 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      DELETE FROM [Departments]
+      WHERE [address] = @p0 AND [DNumber] = @p1;
+      SELECT @@ROWCOUNT;
+dbug: 18.02.2022 14:39:39.345 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 18.02.2022 14:39:39.345 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:39.345 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+fail: 18.02.2022 14:39:39.372 CoreEventId.SaveChangesFailed[10000] (Microsoft.EntityFrameworkCore.Update) 
+      An exception occurred in the database while saving changes for context type 'Infrastructure.DataBase.DataBaseContext'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_Employees_Departments_DepartmentAddress_DepartmentNumber". The conflict occurred in database "MyCompany", table "dbo.Employees".
+      The statement has been terminated.
+         at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+         at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+         at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+      --- End of stack trace from previous location ---
+         at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+      ClientConnectionId:9f3de0ff-0fe8-4c3b-8f1f-1d1a0ba65ab8
+      Error Number:547,State:0,Class:16
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+dbug: 18.02.2022 14:39:40.335 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:40.355 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:40.357 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:40.364 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Company>()
+          .First()'
+warn: 18.02.2022 14:39:40.408 CoreEventId.FirstWithoutOrderByAndFilterWarning[10103] (Microsoft.EntityFrameworkCore.Query) 
+      The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+dbug: 18.02.2022 14:39:40.418 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<Company>(
+          asyncEnumerable: new SingleQueryingEnumerable<Company>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.SelectExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Company.OUI (string) Required PK AfterSave:Throw, 0], [Property: Company.CName (string) Required MaxLength(50), 1], }
+                  SELECT TOP(1) c.id, c.company_name
+                  FROM Companies AS c), 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Company>, 
+              Infrastructure.DataBase.DataBaseContext, 
+              False, 
+              False
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: 18.02.2022 14:39:40.420 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:40.420 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:39:40.421 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:40.421 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:40.421 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[id], [c].[company_name]
+      FROM [Companies] AS [c]
+info: 18.02.2022 14:39:40.422 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[id], [c].[company_name]
+      FROM [Companies] AS [c]
+dbug: 18.02.2022 14:39:40.428 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Company' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:40.433 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:39:40.433 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:40.433 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:40.433 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'Company' tracked by 'DataBaseContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:40.433 CoreEventId.SaveChangesStarting[10004] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:40.433 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:40.435 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:40.435 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:40.435 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:40.435 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 18.02.2022 14:39:40.435 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'ReadCommitted'.
+dbug: 18.02.2022 14:39:40.436 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:40.436 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:39:40.436 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p1='?' (Size = 450), @p0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Companies] SET [company_name] = @p0
+      WHERE [id] = @p1;
+      SELECT @@ROWCOUNT;
+info: 18.02.2022 14:39:40.438 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@p1='?' (Size = 450), @p0='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Companies] SET [company_name] = @p0
+      WHERE [id] = @p1;
+      SELECT @@ROWCOUNT;
+dbug: 18.02.2022 14:39:40.438 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:39:40.438 RelationalEventId.TransactionCommitting[20210] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committing transaction.
+dbug: 18.02.2022 14:39:40.438 RelationalEventId.TransactionCommitted[20202] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committed transaction.
+dbug: 18.02.2022 14:39:40.439 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:40.439 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:40.439 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 18.02.2022 14:39:40.439 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'Company' tracked by 'DataBaseContext' changed state from 'Modified' to 'Unchanged'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:40.439 CoreEventId.SaveChangesCompleted[10005] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges completed for 'DataBaseContext' with 1 entities written to the database.
+dbug: 18.02.2022 14:39:41.427 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:41.449 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:41.451 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:41.467 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Customer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:41.468 CoreEventId.SaveChangesStarting[10004] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:41.468 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:41.469 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:41.469 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:41.469 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:41.469 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 18.02.2022 14:39:41.470 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'ReadCommitted'.
+dbug: 18.02.2022 14:39:41.480 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:41.480 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:39:41.481 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 450), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Customers] ([Id], [CompanyId], [FullName])
+      VALUES (@p0, @p1, @p2);
+fail: 18.02.2022 14:39:41.483 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 450), @p2='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Customers] ([Id], [CompanyId], [FullName])
+      VALUES (@p0, @p1, @p2);
+dbug: 18.02.2022 14:39:41.483 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 18.02.2022 14:39:41.483 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:41.484 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+fail: 18.02.2022 14:39:41.485 CoreEventId.SaveChangesFailed[10000] (Microsoft.EntityFrameworkCore.Update) 
+      An exception occurred in the database while saving changes for context type 'Infrastructure.DataBase.DataBaseContext'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Customers' when IDENTITY_INSERT is set to OFF.
+         at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+         at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+         at System.Threading.Tasks.Task.<>c.<.cctor>b__277_0(Object obj)
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+      --- End of stack trace from previous location ---
+         at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+      ClientConnectionId:9f3de0ff-0fe8-4c3b-8f1f-1d1a0ba65ab8
+      Error Number:544,State:1,Class:16
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+dbug: 18.02.2022 14:39:42.476 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:42.496 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:42.497 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:42.502 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Customer>()
+          .FirstOrDefault(p => p.Id == __customerId_0)'
+dbug: 18.02.2022 14:39:42.528 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Customer>(
+          asyncEnumerable: new SingleQueryingEnumerable<Customer>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.SelectExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Customer.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.CompanyId (string) FK Index, 1], [Property: Customer.FullName (string), 2], }
+                  SELECT TOP(1) c.Id, c.CompanyId, c.FullName
+                  FROM Customers AS c
+                  WHERE c.Id == @__customerId_0), 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Customer>, 
+              Infrastructure.DataBase.DataBaseContext, 
+              False, 
+              False
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: 18.02.2022 14:39:42.535 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:42.535 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:39:42.535 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:42.535 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:42.535 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[CompanyId], [c].[FullName]
+      FROM [Customers] AS [c]
+      WHERE [c].[Id] = @__customerId_0
+info: 18.02.2022 14:39:42.537 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__customerId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[CompanyId], [c].[FullName]
+      FROM [Customers] AS [c]
+      WHERE [c].[Id] = @__customerId_0
+dbug: 18.02.2022 14:39:42.538 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:39:42.538 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:42.538 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:43.538 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:43.564 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:43.566 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:43.630 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:43.655 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Department' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:43.655 CoreEventId.SaveChangesStarting[10004] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:43.655 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:43.667 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:43.667 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:43.667 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:43.667 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 18.02.2022 14:39:43.668 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'ReadCommitted'.
+dbug: 18.02.2022 14:39:43.675 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:43.675 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:39:43.675 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Departments] ([address], [DNumber], [CompanyId])
+      VALUES (@p0, @p1, @p2);
+fail: 18.02.2022 14:39:43.677 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Departments] ([address], [DNumber], [CompanyId])
+      VALUES (@p0, @p1, @p2);
+dbug: 18.02.2022 14:39:43.677 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 18.02.2022 14:39:43.677 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:43.678 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+fail: 18.02.2022 14:39:43.679 CoreEventId.SaveChangesFailed[10000] (Microsoft.EntityFrameworkCore.Update) 
+      An exception occurred in the database while saving changes for context type 'Infrastructure.DataBase.DataBaseContext'.
+      Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+       ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK_Department'. Cannot insert duplicate key in object 'dbo.Departments'. The duplicate key value is (NewYork, 20).
+      The statement has been terminated.
+         at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+         at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+         at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+      --- End of stack trace from previous location ---
+         at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+      --- End of stack trace from previous location ---
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+      ClientConnectionId:9f3de0ff-0fe8-4c3b-8f1f-1d1a0ba65ab8
+      Error Number:2627,State:1,Class:14
+         --- End of inner exception stack trace ---
+         at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+         at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+dbug: 18.02.2022 14:39:44.666 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:44.689 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:44.690 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:44.691 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Employee>()
+          .Count()'
+dbug: 18.02.2022 14:39:44.699 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<int>(
+          asyncEnumerable: new SingleQueryingEnumerable<int>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.SelectExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT COUNT(*)
+                  FROM Employees AS e), 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, int>, 
+              Infrastructure.DataBase.DataBaseContext, 
+              False, 
+              False
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: 18.02.2022 14:39:44.707 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:44.707 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:39:44.707 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:44.708 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:44.708 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [Employees] AS [e]
+info: 18.02.2022 14:39:44.709 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [Employees] AS [e]
+dbug: 18.02.2022 14:39:44.711 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:39:44.711 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:44.711 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:45.709 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:45.726 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:45.727 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:46.730 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:46.753 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:46.754 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:47.761 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:47.781 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:47.783 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:47.813 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Employee' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:47.821 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Department' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:47.821 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'Employee' tracked by 'DataBaseContext' changed state from 'Unchanged' to 'Deleted'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:47.822 CoreEventId.SaveChangesStarting[10004] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:47.822 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:47.829 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'DataBaseContext'.
+dbug: 18.02.2022 14:39:47.829 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:47.829 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:47.829 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 18.02.2022 14:39:47.829 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Began transaction with isolation level 'ReadCommitted'.
+dbug: 18.02.2022 14:39:47.837 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:39:47.837 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:39:47.838 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      DELETE FROM [Employees]
+      WHERE [DateOfBirth] = @p0 AND [Email] = @p1 AND [PassportSerialNumber] = @p2;
+      SELECT @@ROWCOUNT;
+info: 18.02.2022 14:39:47.841 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 450), @p2='?' (Size = 450)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      DELETE FROM [Employees]
+      WHERE [DateOfBirth] = @p0 AND [Email] = @p1 AND [PassportSerialNumber] = @p2;
+      SELECT @@ROWCOUNT;
+dbug: 18.02.2022 14:39:47.841 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:39:47.841 RelationalEventId.TransactionCommitting[20210] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committing transaction.
+dbug: 18.02.2022 14:39:47.841 RelationalEventId.TransactionCommitted[20202] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Committed transaction.
+dbug: 18.02.2022 14:39:47.841 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:47.841 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:47.842 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction) 
+      Disposing transaction.
+dbug: 18.02.2022 14:39:47.849 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'Employee' tracked by 'DataBaseContext' changed state from 'Deleted' to 'Detached'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:39:47.849 CoreEventId.SaveChangesCompleted[10005] (Microsoft.EntityFrameworkCore.Update) 
+      SaveChanges completed for 'DataBaseContext' with 1 entities written to the database.
+dbug: 18.02.2022 14:39:48.844 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:48.864 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:48.865 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:48.872 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 18.02.2022 14:39:48.872 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 18.02.2022 14:39:48.872 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:48.873 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:48.873 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@id='?' (Size = 2), @companyId='?' (Size = 17)], CommandType='Text', CommandTimeout='30']
+      CreateDepartment @name, @companyId
+fail: 18.02.2022 14:39:48.881 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (9ms) [Parameters=[@id='?' (Size = 2), @companyId='?' (Size = 17)], CommandType='Text', CommandTimeout='30']
+      CreateDepartment @name, @companyId
+dbug: 18.02.2022 14:39:48.881 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:48.881 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:49.876 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:49.890 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:49.892 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:49.892 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 18.02.2022 14:39:49.892 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 18.02.2022 14:39:49.893 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:49.893 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:49.893 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@name='?' (DbType = Int32), @address='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      UpdateDepartment @dNumber, @address
+fail: 18.02.2022 14:39:49.894 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (1ms) [Parameters=[@name='?' (DbType = Int32), @address='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      UpdateDepartment @dNumber, @address
+dbug: 18.02.2022 14:39:49.894 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:49.894 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:50.907 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:50.928 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:50.929 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:51.938 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:51.956 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:51.958 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:51.959 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 18.02.2022 14:39:51.959 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 18.02.2022 14:39:51.959 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:51.959 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:51.959 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@name='?' (DbType = Int32), @address='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      RemoveDepartment @dNumber, @address
+fail: 18.02.2022 14:39:51.960 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (1ms) [Parameters=[@name='?' (DbType = Int32), @address='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      RemoveDepartment @dNumber, @address
+dbug: 18.02.2022 14:39:51.960 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:51.960 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:52.964 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:52.981 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:52.982 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:52.983 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 18.02.2022 14:39:52.983 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 18.02.2022 14:39:52.983 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:52.983 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:52.983 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@name='?' (Size = 11)], CommandType='Text', CommandTimeout='30']
+      ChangeName @name
+info: 18.02.2022 14:39:52.986 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@name='?' (Size = 11)], CommandType='Text', CommandTimeout='30']
+      ChangeName @name
+dbug: 18.02.2022 14:39:52.986 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:52.986 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:53.982 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:53.999 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:54.001 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:54.002 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 18.02.2022 14:39:54.002 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 18.02.2022 14:39:54.002 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:54.002 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:54.002 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@id='?' (Size = 2), @companyId='?' (Size = 17)], CommandType='Text', CommandTimeout='30']
+      AddCustomer @name, @companyId
+fail: 18.02.2022 14:39:54.003 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (1ms) [Parameters=[@id='?' (Size = 2), @companyId='?' (Size = 17)], CommandType='Text', CommandTimeout='30']
+      AddCustomer @name, @companyId
+dbug: 18.02.2022 14:39:54.003 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:54.003 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:55.013 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:55.028 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:55.030 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:55.031 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 18.02.2022 14:39:55.031 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 18.02.2022 14:39:55.031 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:55.031 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:55.031 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      RemoveCustomer @id
+info: 18.02.2022 14:39:55.036 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (5ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      RemoveCustomer @id
+dbug: 18.02.2022 14:39:55.036 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:55.036 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:56.044 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:56.066 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:56.067 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:56.067 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 18.02.2022 14:39:56.067 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 18.02.2022 14:39:56.067 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:56.067 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:56.067 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@DateOfBirth='?' (DbType = DateTime), @Email='?' (Size = 17), @PassportSerialNumber='?' (Size = 10), @FirstName='?' (Size = 4), @LastName='?' (Size = 5), @DepartmentNumber='?' (DbType = Int32), @Sex='?' (DbType = Int32), @DepartmentAddress='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      HireEmployee @DateOfBirth, @Email, @PassportSerialNumber, @FirstName, @LastName, @DepartmentNumber, @Sex, @DepartmentAddress
+info: 18.02.2022 14:39:56.071 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (4ms) [Parameters=[@DateOfBirth='?' (DbType = DateTime), @Email='?' (Size = 17), @PassportSerialNumber='?' (Size = 10), @FirstName='?' (Size = 4), @LastName='?' (Size = 5), @DepartmentNumber='?' (DbType = Int32), @Sex='?' (DbType = Int32), @DepartmentAddress='?' (Size = 7)], CommandType='Text', CommandTimeout='30']
+      HireEmployee @DateOfBirth, @Email, @PassportSerialNumber, @FirstName, @LastName, @DepartmentNumber, @Sex, @DepartmentAddress
+dbug: 18.02.2022 14:39:56.071 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:56.071 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:39:57.066 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:57.088 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:57.089 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:58.097 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:58.120 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:58.121 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:39:59.128 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:39:59.148 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:39:59.149 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:00.160 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:00.181 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:00.182 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:00.183 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 18.02.2022 14:40:00.183 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 18.02.2022 14:40:00.183 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:00.183 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:00.183 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@DateOfBirth='?' (DbType = DateTime), @Email='?' (Size = 17), @PassportSerialNumber='?' (Size = 10)], CommandType='Text', CommandTimeout='30']
+      DismissEmployee @DateOfBirth, @Email, @PassportSerialNumber,
+fail: 18.02.2022 14:40:00.184 RelationalEventId.CommandError[20102] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Failed executing DbCommand (1ms) [Parameters=[@DateOfBirth='?' (DbType = DateTime), @Email='?' (Size = 17), @PassportSerialNumber='?' (Size = 10)], CommandType='Text', CommandTimeout='30']
+      DismissEmployee @DateOfBirth, @Email, @PassportSerialNumber,
+dbug: 18.02.2022 14:40:00.184 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:00.184 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:01.191 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:01.212 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:01.213 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:02.222 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:02.238 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:02.239 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:03.253 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:03.269 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:03.270 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:03.271 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Department>()'
+dbug: 18.02.2022 14:40:03.273 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Department>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Department.Address (string) Required PK AfterSave:Throw, 0], [Property: Department.DNumber (int) Required PK AfterSave:Throw, 1], [Property: Department.CompanyId (string) FK Index, 2], }
+              SELECT d.address, d.DNumber, d.CompanyId
+              FROM Departments AS d), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Department>, 
+          Infrastructure.DataBase.DataBaseContext, 
+          False, 
+          False
+      )'
+dbug: 18.02.2022 14:40:04.285 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:04.320 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:04.321 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:05.331 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:05.347 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:05.348 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:05.349 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Company>()
+          .First()'
+warn: 18.02.2022 14:40:05.349 CoreEventId.FirstWithoutOrderByAndFilterWarning[10103] (Microsoft.EntityFrameworkCore.Query) 
+      The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+dbug: 18.02.2022 14:40:05.351 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<Company>(
+          asyncEnumerable: new SingleQueryingEnumerable<Company>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.SelectExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Company.OUI (string) Required PK AfterSave:Throw, 0], [Property: Company.CName (string) Required MaxLength(50), 1], }
+                  SELECT TOP(1) c.id, c.company_name
+                  FROM Companies AS c), 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Company>, 
+              Infrastructure.DataBase.DataBaseContext, 
+              False, 
+              False
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: 18.02.2022 14:40:05.351 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:40:05.351 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:40:05.351 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:05.351 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:05.352 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[id], [c].[company_name]
+      FROM [Companies] AS [c]
+info: 18.02.2022 14:40:05.352 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[id], [c].[company_name]
+      FROM [Companies] AS [c]
+dbug: 18.02.2022 14:40:05.357 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Company' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:40:05.360 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:40:05.360 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:05.360 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:05.361 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'Company' tracked by 'DataBaseContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:40:05.367 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'Company {OUI: 00:00:5e:00:53:af} Modified'
+dbug: 18.02.2022 14:40:06.362 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:06.384 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:06.386 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:06.387 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DataBaseContext.Add<Customer>(__employee)'
+dbug: 18.02.2022 14:40:07.378 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:07.402 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:07.403 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:08.409 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:08.424 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:08.425 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:08.427 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DataBaseContext.Update<Employee>(__employee)'
+dbug: 18.02.2022 14:40:09.440 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:09.464 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:09.465 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:09.466 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Employee>()
+          .Count()'
+dbug: 18.02.2022 14:40:09.468 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<int>(
+          asyncEnumerable: new SingleQueryingEnumerable<int>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.SelectExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT COUNT(*)
+                  FROM Employees AS e), 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, int>, 
+              Infrastructure.DataBase.DataBaseContext, 
+              False, 
+              False
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: 18.02.2022 14:40:09.468 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:40:09.468 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:40:09.468 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:09.468 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:09.468 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [Employees] AS [e]
+info: 18.02.2022 14:40:09.468 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [Employees] AS [e]
+dbug: 18.02.2022 14:40:09.469 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:40:09.469 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:09.469 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:10.468 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:10.484 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:10.485 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:11.499 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:11.516 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:11.517 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:12.536 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:12.551 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:12.553 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:13.561 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:13.580 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:13.581 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:14.597 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:14.612 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:14.614 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:15.628 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:15.648 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:15.650 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:15.650 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Department>()'
+dbug: 18.02.2022 14:40:15.653 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Department>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Department.Address (string) Required PK AfterSave:Throw, 0], [Property: Department.DNumber (int) Required PK AfterSave:Throw, 1], [Property: Department.CompanyId (string) FK Index, 2], }
+              SELECT d.address, d.DNumber, d.CompanyId
+              FROM Departments AS d), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Department>, 
+          Infrastructure.DataBase.DataBaseContext, 
+          False, 
+          False
+      )'
+dbug: 18.02.2022 14:40:16.655 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:16.668 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:16.669 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:17.694 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:17.713 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:17.714 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:17.715 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Company>()
+          .First()'
+warn: 18.02.2022 14:40:17.715 CoreEventId.FirstWithoutOrderByAndFilterWarning[10103] (Microsoft.EntityFrameworkCore.Query) 
+      The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+dbug: 18.02.2022 14:40:17.718 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<Company>(
+          asyncEnumerable: new SingleQueryingEnumerable<Company>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.SelectExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Company.OUI (string) Required PK AfterSave:Throw, 0], [Property: Company.CName (string) Required MaxLength(50), 1], }
+                  SELECT TOP(1) c.id, c.company_name
+                  FROM Companies AS c), 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Company>, 
+              Infrastructure.DataBase.DataBaseContext, 
+              False, 
+              False
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: 18.02.2022 14:40:17.718 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:40:17.718 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:40:17.718 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:17.718 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:17.718 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[id], [c].[company_name]
+      FROM [Companies] AS [c]
+info: 18.02.2022 14:40:17.719 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[id], [c].[company_name]
+      FROM [Companies] AS [c]
+dbug: 18.02.2022 14:40:17.724 CoreEventId.StartedTracking[10806] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      Context 'DataBaseContext' started tracking 'Company' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:40:17.727 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:40:17.727 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:17.727 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:17.728 CoreEventId.StateChanged[10807] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      An entity of type 'Company' tracked by 'DataBaseContext' changed state from 'Unchanged' to 'Modified'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: 18.02.2022 14:40:17.728 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'Company {OUI: 00:00:5e:00:53:af} Modified'
+dbug: 18.02.2022 14:40:18.725 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:18.739 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:18.740 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:18.741 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DataBaseContext.Add<Customer>(__employee)'
+dbug: 18.02.2022 14:40:19.757 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:19.770 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:19.771 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:20.772 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:20.793 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:20.794 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:20.795 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DataBaseContext.Update<Employee>(__employee)'
+dbug: 18.02.2022 14:40:21.803 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:21.829 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:21.830 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:21.831 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<Employee>()
+          .Count()'
+dbug: 18.02.2022 14:40:21.832 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<int>(
+          asyncEnumerable: new SingleQueryingEnumerable<int>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.SelectExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT COUNT(*)
+                  FROM Employees AS e), 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, int>, 
+              Infrastructure.DataBase.DataBaseContext, 
+              False, 
+              False
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: 18.02.2022 14:40:21.832 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2022 14:40:21.832 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2022 14:40:21.832 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:21.832 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:21.833 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [Employees] AS [e]
+info: 18.02.2022 14:40:21.833 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [Employees] AS [e]
+dbug: 18.02.2022 14:40:21.833 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2022 14:40:21.833 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:21.833 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'MyCompany' on server '(localdb)\mssqllocaldb'.
+dbug: 18.02.2022 14:40:22.834 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:22.848 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:22.849 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:23.850 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:23.864 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:23.865 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:24.868 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.
+warn: 18.02.2022 14:40:24.883 SqlServerEventId.DecimalTypeDefaultWarning[30000] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      No type was specified for the decimal property 'Salary' on entity type 'Employee'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType()', specify precision and scale using 'HasPrecision()' or configure a value converter using 'HasConversion()'.
+info: 18.02.2022 14:40:24.885 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.13 initialized 'DataBaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2022 14:40:25.900 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'DataBaseContext' disposed.

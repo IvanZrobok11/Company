@@ -21,7 +21,10 @@ namespace Infrastructure.DataBase
             optionsBuilder.LogTo(_logStream.WriteLine)
                 .EnableDetailedErrors(false)
                 .EnableSensitiveDataLogging(false)
-                .EnableServiceProviderCaching(false);
+                .EnableServiceProviderCaching(false)
+                .ConfigureWarnings(w => w.Ignore());
+
+            optionsBuilder.UseLoggerFactory(new LoggerFactory());
         }
 
         public override void Dispose()

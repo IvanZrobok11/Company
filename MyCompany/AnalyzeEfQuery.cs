@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyCompany
 {
-    public class AnalyzeEfQuery
+    internal class AnalyzeEfQuery
     {
         private readonly Customer _customer = new Customer
         {
@@ -73,6 +73,7 @@ namespace MyCompany
         {
             var departmentRepository = new DepartmentRepository(db);
             var all = departmentRepository.GetAll();
+            await foreach(var dep in all){}
         }
         public async Task HireEmployee(DataBaseContext db)
         {

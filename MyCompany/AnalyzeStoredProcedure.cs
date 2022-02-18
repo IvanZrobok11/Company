@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyCompany
 {
-    public class AnalyzeStoredProcedure
+    internal class AnalyzeStoredProcedure
     {
         private readonly Customer _customer = new Customer
         {

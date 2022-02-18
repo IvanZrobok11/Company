@@ -28,7 +28,7 @@ namespace MyCompany
                 ef.FindCurrentProject,
                 ef.DismissEmployee,
             };
-
+            Console.WriteLine("______Entity framework core_______");
             foreach (var method in listEfMethods)
             {
                 await using (var db = new DataBaseContext())
@@ -38,7 +38,6 @@ namespace MyCompany
                 }
             }
 
-            Console.WriteLine("___________________________________");
 
             var sp = new AnalyzeStoredProcedure();
             var listSpMethods = new List<MakeDbDelegate>
@@ -56,8 +55,35 @@ namespace MyCompany
                 sp.FindCurrentProject,
                 sp.DismissEmployee,
             };
-
+            Console.WriteLine("\n_________Stored procedure_________");
             foreach (var method in listSpMethods)
+            {
+                await using (var db = new DataBaseContext())
+                {
+                    PrintResult(method.GetMethodInfo().Name, MeasureTime(method, db));
+                    await Task.Delay(1000);
+                }
+            }
+
+
+            var cq = new AnalyzeCompiledQuery();
+            var listCompiledQueryMethods = new List<MakeDbDelegate>
+            {
+                cq.CreateDepartment,
+                cq.UpdateDepartment,
+                cq.GetAllDepartment,
+                cq.RemoveDepartment,
+                cq.ChangeName,
+                cq.AddCustomer,
+                cq.RemoveCustomer,
+                cq.HireEmployee,
+                cq.CountEmployees,
+                cq.FindEmployee,
+                cq.FindCurrentProject,
+                cq.DismissEmployee,
+            };
+            Console.WriteLine("\n_____Compiled query second start_____");
+            foreach (var method in listCompiledQueryMethods)
             {
                 await using (var db = new DataBaseContext())
                 {
